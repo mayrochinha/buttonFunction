@@ -5,23 +5,24 @@ To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
 
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    </head> 
+<head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
 <body>
-   
+
     <script language="javascript">
         var num = parseInt(prompt("Digite um número: "));
-        if(num % 10 === 0 && num % 5 === 0 && num % 2 === 0){
-           
-        alert ("O número " + num + " é divisível por 10, 5 e 2.");
-    }   else {
-        alert ("O número " + num + " não é divisível por 10, 5 e 2.");
-        }  
+        if (num % 10 === 0 && num % 5 === 0 && num % 2 === 0) {
+
+            alert("O número " + num + " é divisível por 10, 5 e 2.");
+        } else {
+            alert("O número " + num + " não é divisível por 10, 5 e 2.");
+        }
     </script>
-   
+
     <!--
     Questão 02
     O código se trata da ação do botão onclick que executa 
@@ -34,61 +35,60 @@ and open the template in the editor.
     
     após receber as informações, o código vai somar os dois números e revelar no "alert" o valor = 3.
     -->
-      
-   
+
+
     <script>
         let ano = [];
         ano[0] = parseInt(prompt("Digite o primeiro ano de nascimento: "));
         ano[1] = parseInt(prompt("Digite o segundo ano de nascimento: "));
         ano[2] = parseInt(prompt("Digite o terceiro ano de nascimento: "));
         ano[3] = parseInt(prompt("Digite o quarto ano de nascimento: "));
-        
-    function calcularIdade(anoNascimento){
-        return 2021 - anoNascimento;
-    }    
-       
-    
-    function qtdMaiorIdade(anosNasc = []){
-        var quantidade = 0;
-        
-          if( calcularIdade(anosNasc[0]) >= 18 ){
-          quantidade = quantidade + 1;    
-          } 
-          if( calcularIdade(anosNasc[1]) >= 18 ){
-          quantidade = quantidade + 1;    
-          }  
-          if( calcularIdade(anosNasc[2]) >= 18 ){
-          quantidade = quantidade + 1;    
-          }  
-          if( calcularIdade(anosNasc[3]) >= 18 ){
-          quantidade = quantidade + 1;    
-          }
-          return quantidade;
-    }
-    let qtd = qtdMaiorIdade(ano);
-    alert("Existem " + qtd + " pessoas maiores de 18 anos no grupo informado.");    
-        
+
+        function calcularIdade(anoNascimento) {
+            return 2021 - anoNascimento;
+        }
+
+
+        function qtdMaiorIdade(anosNasc = []) {
+            var quantidade = 0;
+
+            if (calcularIdade(anosNasc[0]) >= 18) {
+                quantidade = quantidade + 1;
+            }
+            if (calcularIdade(anosNasc[1]) >= 18) {
+                quantidade = quantidade + 1;
+            }
+            if (calcularIdade(anosNasc[2]) >= 18) {
+                quantidade = quantidade + 1;
+            }
+            if (calcularIdade(anosNasc[3]) >= 18) {
+                quantidade = quantidade + 1;
+            }
+            return quantidade;
+        }
+        let qtd = qtdMaiorIdade(ano);
+        alert("Existem " + qtd + " pessoas maiores de 18 anos no grupo informado.");
+
     </script>
-   
-    
-    
+
+
+
     <button onclick="analiseEstudo()" id="btn01" type="button">Insira o texto:</button>
     <script>
-        function analiseEstudo(){
+        function analiseEstudo() {
             let resposta = prompt("Você ESTUDOU, ENROLOU ou NENHUM DOS DOIS? ");
-            if(resposta === "ESTUDOU"){
+            if (resposta === "ESTUDEI") {
                 alert("Que bom!");
-            }else if(resposta === "ENROLOU"){
+            } else if (resposta === "ENROLEI") {
                 alert("Xiiiiii...");
-            }else if(resposta === "NENHUM DOS DOIS"){
+            } else if (resposta === "NENHUM DOS DOIS") {
                 alert("OK!");
-            } else{
+            } else {
                 alert("Por favor, digite conforme informado em caixa alta.");
             }
-            
-        }
-    
-    
-    </script>
-</body>  
 
+        }
+
+
+    </script>
+</body>
